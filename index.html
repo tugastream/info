@@ -19,41 +19,36 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      text-align: center;
       padding: 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #0e0e11, #1c1c22);
       transition: background 0.4s ease, color 0.4s ease;
       animation: fadeIn 1.2s ease forwards;
     }
 
     /* LIGHT MODE */
-    body {
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    /* DARK MODE */
-    @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: light) {
       body {
-        background: #0e0e11;
-        color: #fff;
-      }
-      .container {
-        background: #1a1a1f;
+        background: linear-gradient(135deg, #e6e6e6, #ffffff);
+        color: #222;
       }
     }
 
-    /* CONTAINER */
+    /* GLASS CONTAINER */
     .container {
       width: 100%;
       max-width: 420px;
       padding: 30px 22px;
-      background: #ffffff;
-      border-radius: 14px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.15);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
       animation: slideUp 0.8s ease forwards;
     }
 
-    /* LOGO — largura original, apenas max-width para mobile */
+    /* LOGO */
     img.logo {
       max-width: 100%;
       height: auto;
@@ -72,22 +67,24 @@
       font-size: 16px;
       margin-bottom: 25px;
       line-height: 1.5;
+      font-weight: bold;
     }
 
     /* BUTTON */
     a.button {
       display: inline-block;
       padding: 14px 26px;
-      background: #4da3ff;
+      background: rgba(77, 163, 255, 0.85);
       color: #000;
       font-weight: bold;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       transition: transform 0.25s ease, background 0.25s ease;
+      backdrop-filter: blur(4px);
     }
 
     a.button:hover {
-      background: #76baff;
+      background: rgba(118, 186, 255, 0.95);
       transform: scale(1.05);
     }
 
@@ -102,7 +99,7 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    /* MOBILE OPTIMIZATION */
+    /* MOBILE */
     @media (max-width: 480px) {
       .container {
         padding: 24px 18px;
@@ -127,7 +124,7 @@
 
     <h1>Domínio Oficial</h1>
 
-    <p><strong>https://tugastream.top/</strong></p>
+    <p>https://tugastream.top/</p>
 
     <a href="https://tugastream.top/" class="button">Aceder ao Site</a>
   </div>
